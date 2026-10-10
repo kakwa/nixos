@@ -143,9 +143,8 @@ in
       kdePackages.kdenlive
 
       # hashicorp tools
-      #terraform
-      #vault
-      #boundary
+      opentofu
+      openbao
 
       # nix tools
       alejandra
