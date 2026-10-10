@@ -1,0 +1,28 @@
+{
+  "disabled_providers": [
+    "opencode"
+  ],
+  "model": "local/pro",
+  "provider": {
+    "local": {
+      "name": "Local OpenAI-compatible (no auth)",
+      "npm": "@ai-sdk/openai-compatible",
+      "models": {
+        "toto": {
+          "name": "toto"
+        },
+        "titi": {
+          "name": "titi"
+        },
+        "tutu": {
+          "name": "tutu"
+        }
+      },
+      "options": {
+        "apiKey": "secrets",
+        "baseURL": "https://myai.example.com.local/v42"
+      }
+    }
+  },
+  "$schema": "https://opencode.ai/config.json"
+}

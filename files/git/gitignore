@@ -1,7 +1,0 @@
-# IDE
-.idea
-.vscode
-*debug
-
-# vim
-*.sw?
