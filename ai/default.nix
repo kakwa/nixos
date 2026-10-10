@@ -3,19 +3,15 @@
   pkgs,
   config,
   ...
-}:
-let
+}: let
   unstable = import <nixpkgs-unstable> {
-    inherit (pkgs) system;
+    inherit (pkgs.stdenv.hostPlatform) system;
     config.allowUnfree = true;
   };
-in
-{
-
+in {
   environment.systemPackages = with pkgs; [
     unstable.opencode # AI coding agent
   ];
-
 
   #home-manager.users.${vars.user} = {
   #  xdg.configFile."opencode/opencode.json".source = ./assets/opencode.json;

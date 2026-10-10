@@ -27,11 +27,10 @@ in {
         lib
         ;
     })
-    (import ./environment {inherit vars pkgs config;})
-    (import ./gui {inherit vars pkgs config;})
+    (import ./devtools {inherit vars pkgs config;})
+    (import ./apps {inherit vars pkgs config;})
     (import ./fonts {inherit vars pkgs config;})
     (import ./git {inherit vars pkgs config;})
-    (import ./power {inherit vars pkgs config;})
   ];
 
   perso.vim.enable = true;
@@ -40,4 +39,6 @@ in {
       enable = true;
     };
   };
+  services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
+  services.logind.settings.Login.HandleLidSwitchDocked = "ignore";
 }
