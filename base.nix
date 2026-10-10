@@ -139,6 +139,8 @@ in
       kicad # PCB designer
       spotify # music
       discord # chat
+      libreoffice # office suit
+      kdePackages.kdenlive
 
       # hashicorp tools
       #terraform

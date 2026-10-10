@@ -51,7 +51,6 @@
   # roles/misc-base "unattended-upgrades": closest NixOS analog.
   system.autoUpgrade.enable = true;
 
-  # roles/misc-desktop "docker.io"
   virtualisation.docker.enable = true;
 
   users.groups.kakwa = { gid = 1001; };
@@ -64,10 +63,9 @@
     shell = pkgs.zsh;
     extraGroups = [
       "cdrom" "floppy" "audio" "dip" "video" "plugdev" "users" "render"
-      "netdev" "docker" "wheel" # wheel == sudo group on NixOS
+      "netdev" "docker" "wheel" "networkmanager"
     ];
   };
 
   system.stateVersion = "26.05"; # Did you read the comment?
-
 }
