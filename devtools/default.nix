@@ -39,6 +39,7 @@
       rustup # more languages
       python3 # MORE
       go # MORE!
+      nodejs_26 # MORRREEEEE!!!!!
 
       # sysadmin tools
       htop # better top
@@ -69,6 +70,10 @@
       # hashicorp tools
       opentofu
       openbao
+
+      # reverse
+      ghidra
+      file
 
       # nix tools
       alejandra
