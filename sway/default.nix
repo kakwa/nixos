@@ -40,6 +40,7 @@ in
       i3status # status bar generator
       pavucontrol # pulseaudio volume mixer (GUI)
       bluez # bluetooth
+      bluez-tools # bluetooth tools
       blueman # bluetooth device manager
       swayScripts # sway helper scripts (window/workspace cycling)
     ];

@@ -4,6 +4,18 @@
   config,
   ...
 }: {
+  services.avahi = {
+      enable = true;
+      nssmdns = true;
+      publish = {
+        enable = true;
+        addresses = true;
+        domain = true;
+        hinfo = true;
+        userServices = true;
+        workstation = true;
+      };
+  };
   environment = {
     variables = {
       TERMINAL = "${vars.terminal}";
@@ -36,6 +48,7 @@
       clang # compiler
       clang-tools # clang tools (format, LSP/clangd & more
       cmake # smaller hell
+      gnumake # make
       rustup # more languages
       python3 # MORE
       go # MORE!
@@ -46,9 +59,13 @@
       btop # better htop
       tree # see tree dirs/files structure
       tmux # terminal multiplexer/persistent sessions
+      screen # same but old school
       lshw # hardware config scanner
       pstree # process tree display
       ansible # configuration tools
+      virt-manager # VM manager
+      avahi # mdns
+      nssmdns
 
       # container tools
       dive # docker image inspector
@@ -71,12 +88,19 @@
       opentofu
       openbao
 
+      # image tools
+      python3
+      python3Packages.pillow
+      imagemagick
+      gifsicle
+      ffmpeg
+      giflib
+
       # reverse
       ghidra
       file
 
       # nix tools
-      alejandra
       nix-output-monitor
       nh # nix helper (nh search <pkg name>)
       nix-index # another nix helper (search for filenames)
