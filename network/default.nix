@@ -22,6 +22,9 @@
     avahi # mdns
     nssmdns
 
+    wakeonlan # wol (perl)
+    wol
+
     # network tools
     nmap # network search engine
     netcat # net army knife
