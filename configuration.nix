@@ -63,7 +63,7 @@
     shell = pkgs.zsh;
     extraGroups = [
       "cdrom" "floppy" "audio" "dip" "video" "plugdev" "users" "render"
-      "netdev" "docker" "wheel" "networkmanager"
+      "netdev" "docker" "wheel" "networkmanager" "dialout"
     ];
   };
 
