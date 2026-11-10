@@ -5,7 +5,7 @@
   ...
 }: {
   # Allow the primary user to run sudo without a password.
-  security.sudo.rules = [
+  security.sudo.extraRules = [
     {
       users = [ vars.user ];
       commands = [
