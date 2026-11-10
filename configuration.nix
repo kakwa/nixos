@@ -67,5 +67,5 @@
     ];
   };
 
-  system.stateVersion = "26.11-pre";
+  system.stateVersion = "26.05";
 }
