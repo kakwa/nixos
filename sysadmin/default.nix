@@ -28,7 +28,6 @@
     pstree # process tree display
     ansible # configuration tools
     virt-manager # VM manager
-    lshw # list my hardware
     usbutils # for lsusb
     pciutils # for lspci
   ];
