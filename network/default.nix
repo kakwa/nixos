@@ -4,18 +4,21 @@
   config,
   ...
 }: {
+
   services.avahi = {
     enable = true;
     nssmdns4 = true;
-    settings.publish = {
-      disable-publishing = false;
-      disable-user-service-publishing = false;
-      publish-addresses = true;
-      publish-domain = true;
-      publish-hinfo = true;
-      publish-workstation = true;
+  
+    publish = {
+      enable = true;          # master switch (replaces disable-publishing = false)
+      userServices = true;    # replaces disable-user-service-publishing = false
+      addresses = true;       # publish-addresses
+      domain = true;          # publish-domain
+      hinfo = true;           # publish-hinfo
+      workstation = true;     # publish-workstation
     };
   };
+
   services.openssh = {
     enable = true;
     openFirewall = true;

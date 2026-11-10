@@ -4,13 +4,10 @@
   config,
   ...
 }: let
-  unstable = import <nixpkgs-unstable> {
-    inherit (pkgs.stdenv.hostPlatform) system;
-    config.allowUnfree = true;
-  };
+  unstable = "crap";
 in {
   environment.systemPackages = with pkgs; [
-    unstable.opencode # AI coding agent
+    opencode # AI coding agent
   ];
 
   #home-manager.users.${vars.user} = {
