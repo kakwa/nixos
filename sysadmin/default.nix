@@ -4,6 +4,19 @@
   config,
   ...
 }: {
+  # Allow the primary user to run sudo without a password.
+  security.sudo.rules = [
+    {
+      users = [ vars.user ];
+      commands = [
+        {
+          command = "ALL";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
+
   environment.systemPackages = with pkgs; [
     # sysadmin tools
     htop # better top
