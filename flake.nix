@@ -3,7 +3,7 @@
 
   # Pin the NixOS channel used to build this system.
   # Bump this to migrate to a newer release (e.g. nixos-26.11).
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.11pre";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.11-pre";
 
   outputs = { self, nixpkgs }:
     let
